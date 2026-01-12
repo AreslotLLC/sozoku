@@ -1,0 +1,55 @@
+
+> ihin@0.1.0 build
+> next build
+
+▲ Next.js 16.1.1 (Turbopack)
+- Environments: .env.local
+
+  Creating an optimized production build ...
+
+> Build error occurred
+Error: Turbopack build failed with 2 errors:
+./src/components/MarkdownContent.tsx:6:1
+Module not found: Can't resolve 'rehype-slug'
+[0m [90m 4 |[39m [36mimport[39m remarkGfm [36mfrom[39m [32m"remark-gfm"[39m[33m;[39m
+ [90m 5 |[39m [36mimport[39m remarkBreaks [36mfrom[39m [32m"remark-breaks"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 6 |[39m [36mimport[39m rehypeSlug [36mfrom[39m [32m"rehype-slug"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 7 |[39m
+ [90m 8 |[39m [36minterface[39m [33mMarkdownContentProps[39m {
+ [90m 9 |[39m     content[33m:[39m string[33m;[39m[0m
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/MarkdownContent.tsx
+    ./src/app/disposal/[slug]/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/components/MarkdownContent.tsx:5:1
+Module not found: Can't resolve 'remark-breaks'
+[0m [90m 3 |[39m [36mimport[39m [33mReactMarkdown[39m [36mfrom[39m [32m"react-markdown"[39m[33m;[39m
+ [90m 4 |[39m [36mimport[39m remarkGfm [36mfrom[39m [32m"remark-gfm"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 5 |[39m [36mimport[39m remarkBreaks [36mfrom[39m [32m"remark-breaks"[39m[33m;[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 6 |[39m [36mimport[39m rehypeSlug [36mfrom[39m [32m"rehype-slug"[39m[33m;[39m
+ [90m 7 |[39m
+ [90m 8 |[39m [36minterface[39m [33mMarkdownContentProps[39m {[0m
+
+
+
+Import trace:
+  Server Component:
+    ./src/components/MarkdownContent.tsx
+    ./src/app/disposal/[slug]/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+    at <unknown> (./src/components/MarkdownContent.tsx:6:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/components/MarkdownContent.tsx:5:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)

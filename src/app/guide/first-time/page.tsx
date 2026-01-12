@@ -99,6 +99,20 @@ export default function FirstTimeGuidePage() {
                     </div>
                 </section>
 
+                {/* ガイド画像 */}
+                <div className="container mx-auto px-4 sm:px-6 lg:px-8 -mt-10 mb-10 relative z-20">
+                    <div className="max-w-4xl mx-auto">
+                        <Image
+                            src="/images/guide/first-time.png"
+                            alt="初めての相続ガイドのイメージ"
+                            width={1200}
+                            height={675}
+                            className="rounded-3xl shadow-xl w-full border border-white dark:border-slate-800"
+                            priority
+                        />
+                    </div>
+                </div>
+
                 {/* パンくず */}
                 <Breadcrumbs
                     items={[
@@ -265,7 +279,7 @@ export default function FirstTimeGuidePage() {
                         </div>
                     </div>
                 </main>
-            </div>
+            </div >
         </>
     );
 }

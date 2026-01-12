@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { RelatedGuides } from "@/components/RelatedGuides";
 import { TableOfContentsGuide } from "@/components/TableOfContentsGuide";
@@ -71,6 +72,20 @@ export default function CostBreakdownPage() {
                         </div>
                     </div>
                 </section>
+
+                {/* ガイド画像 */}
+                <div className="container mx-auto px-4 sm:px-6 lg:px-8 -mt-10 mb-10 relative z-20">
+                    <div className="max-w-4xl mx-auto">
+                        <Image
+                            src="/images/guide/cost-breakdown.png"
+                            alt="税理士費用の相場ガイドのイメージ"
+                            width={1200}
+                            height={675}
+                            className="rounded-3xl shadow-xl w-full border border-white dark:border-slate-800"
+                            priority
+                        />
+                    </div>
+                </div>
 
                 {/* パンくず */}
                 <Breadcrumbs

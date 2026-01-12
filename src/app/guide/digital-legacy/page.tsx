@@ -1,129 +1,74 @@
 import { Metadata } from "next";
 import Link from "next/link";
-import Image from "next/image";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { RelatedGuides } from "@/components/RelatedGuides";
 import { TableOfContentsGuide } from "@/components/TableOfContentsGuide";
-import { ArticleSchema, HowToSchema } from "@/components/seo/JsonLd";
+import { ArticleSchema } from "@/components/seo/JsonLd";
 import { siteConfig, guidePages, affiliateLinks } from "@/lib/siteConfig";
 
 const PAGE_PATH = guidePages.digitalLegacy.path;
 const FULL_URL = `${siteConfig.baseUrl}${PAGE_PATH}`;
 
 export const metadata: Metadata = {
-    title: "デジタル遺品整理ガイド｜スマホのロックとサブスク解約への対応 | 遺品整理ガイド.jp",
+    title: "デジタル資産の相続ガイド｜暗号資産・電子マネー | あなたの街の相続相談ナビ",
     description:
-        "スマートフォンのパスワードが分からない場合の対処法を解説。サブスクの停止方法、スマホのロック解除の現実、代替案まで、デジタル遺品整理の実践的なガイドです。",
+        "デジタル資産の相続について解説。暗号資産、電子マネー、オンライン口座など、デジタル遺産の相続手続きと評価方法を詳しく紹介します。",
     alternates: {
         canonical: FULL_URL,
     },
     openGraph: {
-        title: "デジタル遺品整理ガイド｜スマホのロックとサブスク解約への対応",
-        description:
-            "スマホのパスワードが分からなくてもサブスクを止める方法、ロック解除の現実、代替案を解説。",
+        title: "デジタル資産の相続ガイド｜暗号資産・電子マネー",
+        description: "デジタル資産の相続について解説。暗号資産、電子マネー、オンライン口座など。",
         url: FULL_URL,
         type: "article",
         publishedTime: guidePages.digitalLegacy.publishedDate,
-        images: [
-            {
-                url: `${siteConfig.baseUrl}/images/guide/デジタル遺品.png`,
-                width: 1200,
-                height: 675,
-                alt: "デジタル遺品整理ガイド",
-            },
-        ],
-    },
-    twitter: {
-        card: "summary_large_image",
-        images: [`${siteConfig.baseUrl}/images/guide/デジタル遺品.png`],
     },
     keywords: [
-        "デジタル遺品",
-        "スマホ",
-        "ロック解除",
-        "サブスク",
-        "解約",
-        "パスワード",
-        "遺品整理",
+        "デジタル資産",
+        "相続",
+        "暗号資産",
+        "仮想通貨",
+        "電子マネー",
+        "オンライン口座",
     ],
 };
 
 const tocItems = [
-    { id: "stop-subscriptions", title: "サブスクを止める3つのルート", level: 1 },
-    { id: "smartphone-lock", title: "スマホのロックへの向き合い方", level: 1 },
-    { id: "alternatives", title: "スマホを開けない場合の代替案", level: 1 },
+    { id: "what-is-digital", title: "デジタル資産とは", level: 1 },
+    { id: "types", title: "相続対象となるデジタル資産", level: 1 },
+    { id: "discovery", title: "デジタル資産の発見方法", level: 1 },
+    { id: "valuation", title: "デジタル資産の評価", level: 1 },
+    { id: "procedures", title: "相続手続きの方法", level: 1 },
     { id: "conclusion", title: "まとめ", level: 1 },
 ];
 
-export default function DigitalLegacyGuidePage() {
+export default function DigitalLegacyPage() {
     return (
         <>
             {/* 構造化データ */}
             <ArticleSchema
-                title="デジタル遺品整理ガイド｜スマホのロックとサブスク解約への対応"
-                description="スマートフォンのパスワードが分からない場合の対処法。サブスクの停止方法、スマホのロック解除の現実、代替案を解説。"
+                title="デジタル資産の相続ガイド｜暗号資産・電子マネー"
+                description="デジタル資産の相続について解説。暗号資産、電子マネー、オンライン口座など、デジタル遺産の相続手続きと評価方法を紹介。"
                 url={FULL_URL}
                 publishedTime={guidePages.digitalLegacy.publishedDate}
-                images={[`${siteConfig.baseUrl}/images/guide/デジタル遺品.png`]}
-                categoryName="遺品整理ガイド"
-            />
-            <HowToSchema
-                name="デジタル遺品整理の手順"
-                description="スマホが開けない場合のサブスク停止とデジタル遺品の整理手順"
-                steps={[
-                    { name: "クレジットカードの停止", text: "故人のカードを停止し、サブスクを一括停止します" },
-                    { name: "通信キャリアの解約", text: "キャリア店舗で回線解約とキャリア決済を停止します" },
-                    { name: "Apple/Googleへの申請", text: "必要に応じてアカウントの閉鎖を申請します" },
-                    { name: "代替手段の検討", text: "PCやアルバムから写真・連絡先を探します" },
-                ]}
-                totalTime="P14D"
+                categoryName="相続ガイド"
             />
             <div className="min-h-screen bg-white dark:bg-slate-950">
                 {/* ヒーローセクション */}
-                <section className="relative w-full h-[50vh] md:h-[60vh] max-h-[600px] overflow-hidden">
-                    {/* 背景画像 */}
-                    <Image
-                        src="/images/guide/デジタル遺品.png"
-                        alt="デジタル遺品整理ガイド"
-                        fill
-                        className="object-cover"
-                        priority
-                    />
-                    {/* オーバーレイ */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-black/20" />
-
-                    <div className="absolute inset-0 flex items-center justify-center">
-                        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                            <div className="max-w-4xl mx-auto text-center">
-                                <span className="inline-block px-4 py-1.5 bg-white/20 backdrop-blur-sm text-white text-xs font-bold uppercase tracking-widest rounded-full mb-6">
-                                    Digital Legacy Guide
-                                </span>
-
-                                <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white leading-[1.2] tracking-tight mb-6 drop-shadow-lg">
-                                    <span className="text-accent">デジタル遺品</span>整理ガイド
-                                    <br className="hidden sm:block" />
-                                    スマホのロックとサブスク解約
-                                </h1>
-
-                                <p className="text-base sm:text-lg text-white/90 leading-relaxed max-w-2xl mx-auto mb-10 drop-shadow">
-                                    スマートフォンのパスワードが分からない場合でも、金銭的な負担を止めることは可能です。
-                                </p>
-
-                                <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                                    <Link
-                                        href="#stop-subscriptions"
-                                        className="w-full sm:w-auto px-8 py-4 bg-accent hover:opacity-90 text-white font-bold rounded-2xl shadow-lg shadow-accent/20 transition-all"
-                                    >
-                                        サブスク停止方法を見る
-                                    </Link>
-                                    <Link
-                                        href="#alternatives"
-                                        className="w-full sm:w-auto px-8 py-4 bg-white/20 backdrop-blur-sm border-2 border-white/30 text-white font-bold rounded-2xl hover:bg-white/30 transition-all"
-                                    >
-                                        代替案を確認する
-                                    </Link>
-                                </div>
-                            </div>
+                <section className="relative w-full py-20 md:py-28 bg-gradient-to-br from-primary/10 via-white to-accent/5 dark:from-slate-900 dark:via-slate-950 dark:to-slate-900">
+                    <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                        <div className="max-w-4xl mx-auto text-center">
+                            <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary text-xs font-bold uppercase tracking-widest rounded-full mb-6">
+                                Guide
+                            </span>
+                            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 dark:text-white mb-6 leading-tight">
+                                <span className="text-accent">デジタル資産</span>の
+                                <br className="sm:hidden" />
+                                相続
+                            </h1>
+                            <p className="text-base sm:text-lg text-slate-600 dark:text-slate-400 mb-8 max-w-2xl mx-auto leading-relaxed">
+                                暗号資産、電子マネー、オンライン口座などのデジタル遺産の相続について解説します。
+                            </p>
                         </div>
                     </div>
                 </section>
@@ -132,260 +77,179 @@ export default function DigitalLegacyGuidePage() {
                 <Breadcrumbs
                     items={[
                         { name: "ホーム", path: "/" },
-                        { name: "ガイド", path: "/guide" },
-                        { name: "デジタル遺品", path: PAGE_PATH },
+                        { name: "デジタル資産の相続", path: PAGE_PATH },
                     ]}
                 />
 
-                {/* メインコンテンツエリア */}
-                <main className="py-10 sm:py-16 md:py-24">
+                {/* メインコンテンツ */}
+                <main className="py-10 sm:py-16">
                     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-                        <div className="max-w-3xl mx-auto">
-                            {/* 目次 */}
-                            <TableOfContentsGuide items={tocItems} />
-
-                            {/* ===== セクション1: サブスクを止める3つのルート ===== */}
-                            <section id="stop-subscriptions" className="mb-12 sm:mb-20 scroll-mt-24">
-                                <div className="flex items-center gap-3 mb-4 sm:mb-8">
-                                    <span className="text-[10px] font-black uppercase tracking-widest text-white bg-primary px-2.5 py-1 rounded shadow-sm">
-                                        Section 01
-                                    </span>
-                                    <div className="h-px flex-1 bg-slate-100 dark:bg-slate-800" />
+                        <div className="flex flex-col lg:flex-row gap-10">
+                            {/* サイドバー（目次） */}
+                            <aside className="lg:w-72 shrink-0 lg:order-2">
+                                <div className="lg:sticky lg:top-24">
+                                    <TableOfContentsGuide items={tocItems} />
                                 </div>
-                                <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-slate-900 dark:text-white mb-4">
-                                    サブスク（月額課金）を止める3つのルート
-                                </h2>
-                                <p className="text-slate-600 dark:text-slate-400 leading-relaxed mb-8">
-                                    スマホの画面が開けなくても、以下の方法で支払いを停止できます。
-                                </p>
+                            </aside>
 
-                                <div className="space-y-6">
-                                    {/* ルート① */}
-                                    <div className="p-4 sm:p-6 bg-primary/5 dark:bg-primary/10 rounded-2xl border border-primary/20">
-                                        <h3 className="text-lg sm:text-xl font-bold text-slate-900 dark:text-white mb-3 flex items-center gap-2">
-                                            <span className="w-8 h-8 flex-shrink-0 flex items-center justify-center bg-primary text-white font-bold rounded-full text-sm">①</span>
-                                            クレジットカード・銀行口座を止める（推奨）
-                                        </h3>
-                                        <p className="text-sm sm:text-base text-slate-600 dark:text-slate-400 leading-relaxed mb-4">
-                                            故人のカードや口座を解約・停止すれば、紐付いているサブスク（動画配信、音楽、アプリ課金等）は「決済不能」となり、自動的に解約されます。
+                            {/* 記事本文 */}
+                            <article className="flex-1 lg:order-1">
+                                <div className="prose prose-slate dark:prose-invert max-w-none">
+                                    {/* デジタル資産とは */}
+                                    <section id="what-is-digital" className="mb-16">
+                                        <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white mb-6 flex items-center gap-3">
+                                            <span className="text-primary">①</span> デジタル資産とは
+                                        </h2>
+                                        <p className="text-slate-600 dark:text-slate-400 leading-relaxed mb-6">
+                                            デジタル資産とは、電子的なデータとして存在する財産のことです。
+                                            近年、暗号資産（仮想通貨）や電子マネーの普及により、相続における重要性が高まっています。
                                         </p>
-                                        <div className="grid gap-3 sm:grid-cols-2">
-                                            <div className="p-3 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-700">
-                                                <span className="text-xs font-bold text-primary">メリット</span>
-                                                <p className="text-sm text-slate-600 dark:text-slate-400 mt-1">各サービスへ個別に連絡する手間が省ける</p>
-                                            </div>
-                                            <div className="p-3 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-700">
-                                                <span className="text-xs font-bold text-accent">注意点</span>
-                                                <p className="text-sm text-slate-600 dark:text-slate-400 mt-1">公共料金や通信費の引き落としも止まるため、タイミングは慎重に</p>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    {/* ルート② */}
-                                    <div className="p-4 sm:p-6 bg-slate-50 dark:bg-slate-900 rounded-2xl border border-slate-100 dark:border-slate-800">
-                                        <h3 className="text-lg sm:text-xl font-bold text-slate-900 dark:text-white mb-3 flex items-center gap-2">
-                                            <span className="w-8 h-8 flex-shrink-0 flex items-center justify-center bg-primary text-white font-bold rounded-full text-sm">②</span>
-                                            通信キャリア（携帯電話会社）の回線解約
-                                        </h3>
-                                        <p className="text-sm sm:text-base text-slate-600 dark:text-slate-400 leading-relaxed mb-4">
-                                            ドコモ、au、ソフトバンク等の店舗で回線の解約手続きを行います。これにより「キャリア決済」で支払っていたサブスクも同時に停止されます。
-                                        </p>
-                                        <div className="p-3 bg-white dark:bg-slate-950 rounded-xl border border-slate-200 dark:border-slate-700">
-                                            <span className="text-xs font-bold text-primary">必要書類</span>
-                                            <p className="text-sm text-slate-600 dark:text-slate-400 mt-1">死亡診断書の写し、除籍謄本、来店者の本人確認書類など（各社HPで事前確認を推奨）</p>
-                                        </div>
-                                    </div>
-
-                                    {/* ルート③ */}
-                                    <div className="p-4 sm:p-6 bg-slate-50 dark:bg-slate-900 rounded-2xl border border-slate-100 dark:border-slate-800">
-                                        <h3 className="text-lg sm:text-xl font-bold text-slate-900 dark:text-white mb-3 flex items-center gap-2">
-                                            <span className="w-8 h-8 flex-shrink-0 flex items-center justify-center bg-primary text-white font-bold rounded-full text-sm">③</span>
-                                            各プラットフォームへの依頼
-                                        </h3>
-                                        <p className="text-sm sm:text-base text-slate-600 dark:text-slate-400 leading-relaxed mb-4">
-                                            AppleやGoogleに直接、アカウントの閉鎖を依頼する方法です。
-                                        </p>
-                                        <div className="grid gap-3 sm:grid-cols-2">
-                                            <div className="p-3 bg-white dark:bg-slate-950 rounded-xl border border-slate-200 dark:border-slate-700">
-                                                <span className="text-xs font-bold text-slate-900 dark:text-white">Apple</span>
-                                                <p className="text-sm text-slate-600 dark:text-slate-400 mt-1">
-                                                    「故人アカウント管理連絡先」が設定されていない場合、死亡診断書とともにアカウントの削除を申請可能
-                                                </p>
-                                            </div>
-                                            <div className="p-3 bg-white dark:bg-slate-950 rounded-xl border border-slate-200 dark:border-slate-700">
-                                                <span className="text-xs font-bold text-slate-900 dark:text-white">Google</span>
-                                                <p className="text-sm text-slate-600 dark:text-slate-400 mt-1">
-                                                    「アカウント無効化管理ツール」の設定がない場合でも、親族からの申請でアカウント閉鎖が可能
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </section>
-
-                            {/* ===== セクション2: スマホのロックへの向き合い方 ===== */}
-                            <section id="smartphone-lock" className="mb-12 sm:mb-20 scroll-mt-24">
-                                <div className="flex items-center gap-3 mb-4 sm:mb-8">
-                                    <span className="text-[10px] font-black uppercase tracking-widest text-white bg-primary px-2.5 py-1 rounded shadow-sm">
-                                        Section 02
-                                    </span>
-                                    <div className="h-px flex-1 bg-slate-100 dark:bg-slate-800" />
-                                </div>
-                                <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-slate-900 dark:text-white mb-4">
-                                    スマホ本体のロックへの向き合い方
-                                </h2>
-                                <p className="text-slate-600 dark:text-slate-400 leading-relaxed mb-8">
-                                    現代のスマホはセキュリティが非常に高く、専門業者でも解除できないことが増えています。
-                                </p>
-
-                                {/* テーブル */}
-                                <div className="overflow-x-auto rounded-2xl border border-slate-200 dark:border-slate-800 mb-8">
-                                    <table className="w-full text-sm">
-                                        <thead className="bg-slate-50 dark:bg-slate-900">
-                                            <tr>
-                                                <th className="px-4 py-3 text-left font-bold text-slate-900 dark:text-white">種類</th>
-                                                <th className="px-4 py-3 text-left font-bold text-slate-900 dark:text-white">特徴と対応</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody className="divide-y divide-slate-100 dark:divide-slate-800">
-                                            <tr className="bg-white dark:bg-slate-950">
-                                                <td className="px-4 py-4 font-bold text-slate-900 dark:text-white whitespace-nowrap">iPhone</td>
-                                                <td className="px-4 py-4 text-slate-600 dark:text-slate-400">
-                                                    パスワードを10回間違えるとデータが消去される設定があるため、適当な入力は厳禁。「デジタルレガシー」の設定がない場合、解除は極めて困難。
-                                                </td>
-                                            </tr>
-                                            <tr className="bg-slate-50/50 dark:bg-slate-900/50">
-                                                <td className="px-4 py-4 font-bold text-slate-900 dark:text-white whitespace-nowrap">Android</td>
-                                                <td className="px-4 py-4 text-slate-600 dark:text-slate-400">
-                                                    メーカーやOSのバージョンによるが、基本的にはApple同様に強固。Googleアカウント側からデータの操作ができないかまず検討する。
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-
-                                {/* 警告 */}
-                                <div className="p-4 sm:p-6 bg-red-50 dark:bg-red-950/30 border border-red-200 dark:border-red-900 rounded-2xl">
-                                    <div className="flex items-start gap-3">
-                                        <span className="text-2xl">⚠️</span>
-                                        <div>
-                                            <h4 className="font-bold text-red-700 dark:text-red-400 mb-2">
-                                                警告：闇雲なパスワード入力は避ける
-                                            </h4>
-                                            <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
-                                                何度も入力を失敗すると、スマホに永久的なロックがかかったり、自動で初期化されたりします。大切な写真などを取り出したい場合は、まず入力を止めて専門家に相談してください。
+                                        <div className="p-6 bg-primary/5 dark:bg-primary/10 border border-primary/20 rounded-2xl">
+                                            <p className="text-slate-700 dark:text-slate-300 font-bold text-center">
+                                                デジタル資産も他の財産と同様に<span className="text-accent">相続税の課税対象</span>です
                                             </p>
                                         </div>
-                                    </div>
-                                </div>
-                            </section>
+                                    </section>
 
-                            {/* ===== セクション3: 代替案 ===== */}
-                            <section id="alternatives" className="mb-12 sm:mb-20 scroll-mt-24">
-                                <div className="flex items-center gap-3 mb-4 sm:mb-8">
-                                    <span className="text-[10px] font-black uppercase tracking-widest text-white bg-primary px-2.5 py-1 rounded shadow-sm">
-                                        Section 03
-                                    </span>
-                                    <div className="h-px flex-1 bg-slate-100 dark:bg-slate-800" />
-                                </div>
-                                <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-slate-900 dark:text-white mb-4">
-                                    「スマホを開けない」場合の代替案
-                                </h2>
-                                <p className="text-slate-600 dark:text-slate-400 leading-relaxed mb-8">
-                                    中身が見られないストレスを軽減するための実務的な知恵です。
-                                </p>
+                                    {/* 相続対象となるデジタル資産 */}
+                                    <section id="types" className="mb-16">
+                                        <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white mb-6 flex items-center gap-3">
+                                            <span className="text-primary">②</span> 相続対象となるデジタル資産
+                                        </h2>
+                                        <div className="grid sm:grid-cols-2 gap-4">
+                                            {[
+                                                { title: "暗号資産（仮想通貨）", items: ["ビットコイン", "イーサリアム", "その他アルトコイン"] },
+                                                { title: "電子マネー・ポイント", items: ["PayPay残高", "楽天ポイント", "各種電子マネー"] },
+                                                { title: "オンライン口座", items: ["ネット銀行", "ネット証券", "FX口座"] },
+                                                { title: "その他のデジタル資産", items: ["NFT", "ドメイン", "オンラインゲームのアイテム"] },
+                                            ].map((category, index) => (
+                                                <div key={index} className="p-5 bg-slate-50 dark:bg-slate-900 rounded-xl border border-slate-100 dark:border-slate-800">
+                                                    <h3 className="font-bold text-slate-900 dark:text-white mb-3">{category.title}</h3>
+                                                    <ul className="text-sm text-slate-600 dark:text-slate-400 space-y-1">
+                                                        {category.items.map((item, i) => (
+                                                            <li key={i}>• {item}</li>
+                                                        ))}
+                                                    </ul>
+                                                </div>
+                                            ))}
+                                        </div>
+                                    </section>
 
-                                <div className="space-y-4">
-                                    {[
-                                        {
-                                            title: "写真を探す",
-                                            desc: "故人が使っていたパソコン（PCはスマホよりログインの壁が低いことが多い）や、共有のデジカメ、外付けHDD、印刷されたアルバムなどを先に探します。",
-                                            icon: "📷"
-                                        },
-                                        {
-                                            title: "連絡先を知りたい",
-                                            desc: "年賀状、紙の住所録、仕事の名刺入れ、固定電話の着信履歴など、アナログな情報を頼る方が確実な場合が多いです。",
-                                            icon: "📇"
-                                        },
-                                        {
-                                            title: "SNSの処理",
-                                            desc: "FacebookやInstagramは、スマホが開けなくても「追悼アカウント」への移行や削除を公式フォームから申請できます。",
-                                            icon: "📱"
-                                        },
-                                    ].map((item, i) => (
-                                        <div key={i} className="p-4 sm:p-6 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 flex items-start gap-4">
-                                            <span className="text-2xl">{item.icon}</span>
-                                            <div>
-                                                <h4 className="font-bold text-slate-900 dark:text-white mb-1">{item.title}</h4>
-                                                <p className="text-sm sm:text-base text-slate-600 dark:text-slate-400 leading-relaxed">{item.desc}</p>
+                                    {/* デジタル資産の発見方法 */}
+                                    <section id="discovery" className="mb-16">
+                                        <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white mb-6 flex items-center gap-3">
+                                            <span className="text-primary">③</span> デジタル資産の発見方法
+                                        </h2>
+                                        <p className="text-slate-600 dark:text-slate-400 leading-relaxed mb-6">
+                                            デジタル資産は目に見えないため、発見が難しいケースがあります。以下の方法で調査しましょう。
+                                        </p>
+                                        <div className="space-y-4">
+                                            {[
+                                                { title: "メールの確認", desc: "取引所やサービスからのメールを探す" },
+                                                { title: "スマートフォンのアプリ", desc: "取引アプリやウォレットアプリがないか確認" },
+                                                { title: "パソコンのブラウザ", desc: "ブックマークや履歴から手がかりを探す" },
+                                                { title: "銀行口座の履歴", desc: "取引所への振込履歴がないか確認" },
+                                                { title: "確定申告書", desc: "過去の申告で暗号資産の記載がないか確認" },
+                                            ].map((item, index) => (
+                                                <div key={index} className="flex items-start gap-4 p-4 bg-slate-50 dark:bg-slate-900 rounded-xl border border-slate-100 dark:border-slate-800">
+                                                    <span className="flex-shrink-0 w-8 h-8 flex items-center justify-center rounded-full bg-primary text-white font-bold text-sm">
+                                                        {index + 1}
+                                                    </span>
+                                                    <div>
+                                                        <h3 className="font-bold text-slate-900 dark:text-white">{item.title}</h3>
+                                                        <p className="text-sm text-slate-600 dark:text-slate-400">{item.desc}</p>
+                                                    </div>
+                                                </div>
+                                            ))}
+                                        </div>
+                                    </section>
+
+                                    {/* デジタル資産の評価 */}
+                                    <section id="valuation" className="mb-16">
+                                        <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white mb-6 flex items-center gap-3">
+                                            <span className="text-primary">④</span> デジタル資産の評価
+                                        </h2>
+                                        <p className="text-slate-600 dark:text-slate-400 leading-relaxed mb-6">
+                                            デジタル資産の相続税評価は、<strong>相続開始日の時価</strong>で行います。
+                                        </p>
+                                        <div className="space-y-4">
+                                            <div className="p-5 bg-accent/5 rounded-xl border border-accent/20">
+                                                <h3 className="font-bold text-slate-900 dark:text-white mb-2">暗号資産の評価方法</h3>
+                                                <p className="text-sm text-slate-600 dark:text-slate-400">
+                                                    相続開始日（死亡日）の取引所での終値、または活発な取引がない場合は最終取引価格を用います。
+                                                    複数の取引所で価格が異なる場合は、主に取引していた取引所の価格を基準とします。
+                                                </p>
+                                            </div>
+                                            <div className="p-5 bg-slate-50 dark:bg-slate-900 rounded-xl border border-slate-100 dark:border-slate-800">
+                                                <h3 className="font-bold text-slate-900 dark:text-white mb-2">電子マネー・ポイントの評価</h3>
+                                                <p className="text-sm text-slate-600 dark:text-slate-400">
+                                                    残高をそのまま円換算で評価します。ただし、一身専属的な（本人にのみ帰属する）ポイントは相続対象外となる場合があります。
+                                                </p>
                                             </div>
                                         </div>
-                                    ))}
-                                </div>
-                            </section>
+                                    </section>
 
-                            {/* ===== まとめ ===== */}
-                            <section id="conclusion" className="mb-10 sm:mb-16 scroll-mt-24">
-                                <div className="p-5 sm:p-8 bg-gradient-to-br from-accent/10 to-primary/10 dark:from-accent/20 dark:to-primary/20 rounded-2xl sm:rounded-3xl border border-accent/20">
-                                    <div className="flex items-start gap-4">
-                                        <span className="text-2xl sm:text-3xl">💡</span>
-                                        <div>
-                                            <h3 className="text-lg sm:text-xl font-bold text-slate-900 dark:text-white mb-3">
-                                                最後に：無理をしないという選択
-                                            </h3>
-                                            <p className="text-sm sm:text-base text-slate-600 dark:text-slate-400 leading-relaxed mb-4">
-                                                デジタル遺品は物理的な遺品と違い、解決策が見つからないことも多々あります。「サブスクさえ止まれば、中身は諦める」という決断も、あなたの心を守るためには大切な選択肢です。
+                                    {/* 相続手続きの方法 */}
+                                    <section id="procedures" className="mb-16">
+                                        <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white mb-6 flex items-center gap-3">
+                                            <span className="text-primary">⑤</span> 相続手続きの方法
+                                        </h2>
+                                        <div className="space-y-4">
+                                            <div className="p-5 bg-amber-50 dark:bg-amber-950/30 rounded-xl border border-amber-200 dark:border-amber-900">
+                                                <h3 className="font-bold text-slate-900 dark:text-white mb-2">⚠ 秘密鍵・パスワードの問題</h3>
+                                                <p className="text-sm text-slate-600 dark:text-slate-400">
+                                                    暗号資産の秘密鍵やパスワードが不明な場合、資産にアクセスできなくなる可能性があります。
+                                                    ウォレットの種類によっては、秘密鍵がなければ永久に引き出せないケースも。
+                                                </p>
+                                            </div>
+                                            <div className="p-5 bg-slate-50 dark:bg-slate-900 rounded-xl border border-slate-100 dark:border-slate-800">
+                                                <h3 className="font-bold text-slate-900 dark:text-white mb-2">取引所に連絡</h3>
+                                                <p className="text-sm text-slate-600 dark:text-slate-400">
+                                                    国内取引所の場合、戸籍謄本や遺産分割協議書を提出することで、相続手続きを行うことができます。
+                                                    各取引所の相続担当窓口に連絡しましょう。
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </section>
+
+                                    {/* まとめ */}
+                                    <section id="conclusion" className="mb-16">
+                                        <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white mb-6 flex items-center gap-3">
+                                            <span className="text-primary">⑥</span> まとめ
+                                        </h2>
+                                        <div className="p-6 bg-accent/5 border border-accent/20 rounded-2xl">
+                                            <p className="text-slate-600 dark:text-slate-400 leading-relaxed mb-4">
+                                                デジタル資産の相続は、従来の財産とは異なる特有の課題があります。
+                                                特に暗号資産は発見や評価が難しく、専門知識が必要です。
+                                                デジタル資産がある場合は、相続に詳しい税理士に相談することをおすすめします。
                                             </p>
-                                            <div className="space-y-2 mt-4">
-                                                <div className="flex items-center gap-2 text-sm text-slate-600 dark:text-slate-400">
-                                                    <span className="w-5 h-5 rounded border border-slate-300 dark:border-slate-600 flex-shrink-0"></span>
-                                                    クレジットカードの利用明細を確認し、不要な引き落としを特定する
-                                                </div>
-                                                <div className="flex items-center gap-2 text-sm text-slate-600 dark:text-slate-400">
-                                                    <span className="w-5 h-5 rounded border border-slate-300 dark:border-slate-600 flex-shrink-0"></span>
-                                                    通信キャリアの店舗へ行く準備をする
-                                                </div>
-                                                <div className="flex items-center gap-2 text-sm text-slate-600 dark:text-slate-400">
-                                                    <span className="w-5 h-5 rounded border border-slate-300 dark:border-slate-600 flex-shrink-0"></span>
-                                                    パソコンが残っているなら、そちらのログインを試みる
-                                                </div>
-                                            </div>
+                                            <p className="text-slate-700 dark:text-slate-300 font-bold">
+                                                当サイトでは、あなたの地域で相続に強い税理士を探すことができます。
+                                            </p>
                                         </div>
-                                    </div>
-                                </div>
-                            </section>
+                                    </section>
 
-                            {/* 関連ガイド */}
-                            <RelatedGuides currentPath={PAGE_PATH} />
+                                    {/* CTA */}
+                                    <section className="p-8 bg-gradient-to-r from-primary to-primary/80 rounded-3xl text-white text-center">
+                                        <h3 className="text-2xl font-bold mb-4">デジタル資産の相続相談</h3>
+                                        <p className="mb-6 opacity-90">
+                                            暗号資産や電子マネーの相続は、専門家に相談しましょう。
+                                        </p>
+                                        <Link
+                                            href="/contact"
+                                            className="inline-block px-8 py-4 bg-white text-primary font-bold rounded-xl hover:bg-slate-100 transition-colors"
+                                        >
+                                            無料で税理士を探す
+                                        </Link>
+                                    </section>
+
+                                    {/* 関連ガイド */}
+                                    <RelatedGuides currentPath={PAGE_PATH} />
+                                </div>
+                            </article>
                         </div>
                     </div>
                 </main>
-
-                {/* CTAセクション */}
-                <section className="py-10 md:py-20 bg-gradient-to-br from-primary/5 via-white to-accent/5 dark:from-slate-900 dark:via-slate-950 dark:to-slate-900">
-                    <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-                        <div className="max-w-3xl mx-auto text-center">
-                            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-slate-900 dark:text-white mb-4">
-                                デジタル遺品でお困りの方へ
-                            </h2>
-                            <p className="text-slate-600 dark:text-slate-400 mb-8 leading-relaxed">
-                                遺品整理のプロが、デジタル遺品を含めた総合的なサポートをご提供いたします。
-                                相談・見積もりは無料です。
-                            </p>
-                            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                                <Link
-                                    href={affiliateLinks.quote}
-                                    className="w-full sm:w-auto px-10 py-4 bg-primary hover:bg-primary/90 text-white font-bold rounded-2xl shadow-xl shadow-primary/20 transition-all flex items-center justify-center gap-2"
-                                >
-                                    <span>無料相談・見積もりを依頼する</span>
-                                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                                    </svg>
-                                </Link>
-                            </div>
-                        </div>
-                    </div>
-                </section>
             </div>
         </>
     );

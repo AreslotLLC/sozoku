@@ -24,37 +24,31 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     const guidePages: MetadataRoute.Sitemap = [
         {
             url: `${BASE_URL}/guide/first-time`,
-            lastModified: new Date("2026-01-07"),
+            lastModified: new Date("2026-01-12"),
             changeFrequency: "monthly" as const,
             priority: 0.9,
         },
         {
             url: `${BASE_URL}/guide/choosing-company`,
-            lastModified: new Date("2026-01-07"),
+            lastModified: new Date("2026-01-12"),
             changeFrequency: "monthly" as const,
             priority: 0.9,
         },
         {
             url: `${BASE_URL}/guide/precautions`,
-            lastModified: new Date("2026-01-07"),
+            lastModified: new Date("2026-01-12"),
             changeFrequency: "monthly" as const,
             priority: 0.9,
         },
         {
             url: `${BASE_URL}/guide/digital-legacy`,
-            lastModified: new Date("2026-01-08"),
-            changeFrequency: "monthly" as const,
-            priority: 0.9,
-        },
-        {
-            url: `${BASE_URL}/guide/self-care`,
-            lastModified: new Date("2026-01-07"),
+            lastModified: new Date("2026-01-12"),
             changeFrequency: "monthly" as const,
             priority: 0.9,
         },
         {
             url: `${BASE_URL}/guide/cost-breakdown`,
-            lastModified: new Date("2026-01-09"),
+            lastModified: new Date("2026-01-12"),
             changeFrequency: "monthly" as const,
             priority: 0.9,
         },

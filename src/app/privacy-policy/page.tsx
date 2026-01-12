@@ -7,8 +7,8 @@ const PAGE_PATH = "/privacy-policy";
 const FULL_URL = `${siteConfig.baseUrl}${PAGE_PATH}`;
 
 export const metadata: Metadata = {
-    title: "プライバシーポリシー | 遺品整理ガイド.jp",
-    description: "遺品整理ガイド.jpのプライバシーポリシーです。個人情報の取り扱い、Cookie・アクセス解析の使用について説明しています。",
+    title: "プライバシーポリシー | あなたの街の相続相談ナビ",
+    description: "あなたの街の相続相談ナビのプライバシーポリシーです。個人情報の取り扱い、Cookie・アクセス解析の使用について説明しています。",
     alternates: {
         canonical: FULL_URL,
     },
@@ -54,7 +54,7 @@ export default function PrivacyPolicyPage() {
                                     1. 基本方針
                                 </h2>
                                 <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
-                                    遺品整理ガイド.jp（以下「当サイト」といいます）は、訪問者の個人情報の保護について、以下のとおりプライバシーポリシーを定め、これに従って適切に取り扱います。
+                                    あなたの街の相続相談ナビ（以下「当サイト」といいます）は、訪問者の個人情報の保護について、以下のとおりプライバシーポリシーを定め、これに従って適切に取り扱います。
                                 </p>
                             </section>
 

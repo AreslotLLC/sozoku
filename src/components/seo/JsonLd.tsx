@@ -104,7 +104,7 @@ export function WebSiteSchema({
 
 /**
  * Article 構造化データ（記事ページ用）
- * - aboutプロパティで「遺品整理」というトピックを明示
+ * - aboutプロパティで「相続」というトピックを明示
  */
 export function ArticleSchema({
     title,
@@ -112,7 +112,7 @@ export function ArticleSchema({
     url,
     publishedTime,
     modifiedTime,
-    authorName = "遺品整理ガイド.jp編集部",
+    authorName = "あなたの街の相続相談ナビ編集部",
     images = [],
     categoryName,
 }: ArticleSchemaProps) {
@@ -130,18 +130,18 @@ export function ArticleSchema({
         },
         publisher: {
             "@type": "Organization",
-            name: "遺品整理ガイド.jp",
+            name: "あなたの街の相続相談ナビ",
             logo: {
                 "@type": "ImageObject",
                 url: `${process.env.NEXT_PUBLIC_BASE_URL || ""}/logo.png`,
             },
         },
-        // 遺品整理に関する記事であることを明示
+        // 相続に関する記事であることを明示
         about: [
             {
                 "@type": "Thing",
-                "name": "遺品整理",
-                "sameAs": "https://ja.wikipedia.org/wiki/%E9%81%BA%E5%93%81%E6%95%B4%E7%90%86"
+                "name": "相続",
+                "sameAs": "https://ja.wikipedia.org/wiki/%E7%9B%B8%E7%B6%9A"
             },
             ...(categoryName ? [{
                 "@type": "Thing",

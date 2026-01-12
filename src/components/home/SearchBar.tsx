@@ -13,7 +13,7 @@ interface SearchBarProps {
  * ファーストビューに配置する大きな検索入力
  */
 export function SearchBar({
-    placeholder = "処分したいモノを入力（例：ソファー、冷蔵庫）",
+    placeholder = "お住まいの地域を入力（例：東京都、大阪市）",
     className = "",
 }: SearchBarProps) {
     const [query, setQuery] = useState("");
@@ -44,8 +44,9 @@ export function SearchBar({
                 </button>
             </div>
             <p className="mt-2 sm:mt-3 text-xs sm:text-sm text-slate-500 text-center">
-                キーワードを入力して、処分方法を検索できます
+                地域名を入力して、相続に強い税理士を検索できます
             </p>
         </form>
     );
 }
+

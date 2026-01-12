@@ -5,12 +5,11 @@ import Link from "next/link";
 import { Menu, X } from "lucide-react";
 
 const navLinks = [
-    { href: "/guide/first-time", label: "初めての遺品整理" },
-    { href: "/guide/cost-breakdown", label: "遺品整理の費用相場" },
-    { href: "/guide/choosing-company", label: "業者選びのコツ" },
-    { href: "/guide/precautions", label: "遺品整理の注意点" },
-    { href: "/guide/digital-legacy", label: "デジタル遺品" },
-    { href: "/guide/self-care", label: "頑張るあなたへ" },
+    { href: "/guide/first-time", label: "初めての相続" },
+    { href: "/guide/cost-breakdown", label: "税理士費用の相場" },
+    { href: "/guide/choosing-company", label: "税理士選びのポイント" },
+    { href: "/guide/precautions", label: "相続手続きの注意点" },
+    { href: "/guide/digital-legacy", label: "デジタル資産の相続" },
 ];
 
 export function Header() {
@@ -22,7 +21,7 @@ export function Header() {
                 {/* ロゴ */}
                 <Link href="/" className="group flex items-center space-x-2">
                     <span className="text-xl sm:text-2xl font-bold text-primary group-hover:opacity-80 transition-all duration-300">
-                        遺品整理ガイド.jp
+                        相続相談ナビ
                     </span>
                 </Link>
 
@@ -78,23 +77,22 @@ export function Footer() {
                     {/* ブランド */}
                     <div className="flex items-center gap-6">
                         <Link href="/" className="text-lg font-bold text-primary">
-                            遺品整理ガイド.jp
+                            相続相談ナビ
                         </Link>
                         <span className="hidden md:block text-xs text-slate-500">|</span>
                         <p className="hidden md:block text-xs text-slate-500">
-                            遺品整理でお困りの方へ
+                            相続でお困りの方へ
                         </p>
                     </div>
 
                     {/* ガイドリンク */}
                     <nav className="flex flex-wrap gap-x-4 gap-y-1 text-xs">
                         {[
-                            { href: "/guide/first-time", label: "初めての遺品整理" },
-                            { href: "/guide/cost-breakdown", label: "遺品整理の費用相場" },
-                            { href: "/guide/choosing-company", label: "業者選びのコツ" },
-                            { href: "/guide/precautions", label: "遺品整理の注意点" },
-                            { href: "/guide/digital-legacy", label: "デジタル遺品" },
-                            { href: "/guide/self-care", label: "頑張るあなたへ" },
+                            { href: "/guide/first-time", label: "初めての相続" },
+                            { href: "/guide/cost-breakdown", label: "税理士費用の相場" },
+                            { href: "/guide/choosing-company", label: "税理士選びのポイント" },
+                            { href: "/guide/precautions", label: "相続手続きの注意点" },
+                            { href: "/guide/digital-legacy", label: "デジタル資産の相続" },
                         ].map((link) => (
                             <Link
                                 key={link.href}
@@ -132,10 +130,11 @@ export function Footer() {
                 {/* コピーライト */}
                 <div className="mt-4 pt-4 border-t border-slate-200 dark:border-slate-800 text-center md:text-left">
                     <p className="text-xs text-slate-400">
-                        © {new Date().getFullYear()} 遺品整理ガイド.jp All rights reserved.
+                        © {new Date().getFullYear()} あなたの街の相続相談ナビ All rights reserved.
                     </p>
                 </div>
             </div>
         </footer>
     );
 }
+

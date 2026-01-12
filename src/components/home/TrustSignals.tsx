@@ -4,23 +4,23 @@
 const trustItems = [
     {
         tag: "Safety",
-        title: "自治体ルール準拠",
-        description: "各自治体の最新処分ルールに基づいた正確な情報を掲載",
+        title: "税法に準拠",
+        description: "最新の相続税法・関連法規に基づいた正確な情報を掲載",
     },
     {
         tag: "Expert",
         title: "専門家監修",
-        description: "遺品整理士・廃棄物処理の専門家が内容を監修",
+        description: "税理士・相続専門家が内容を監修",
     },
     {
         tag: "Latest",
         title: "定期的な情報更新",
-        description: "法改正や制度変更に合わせて情報を随時アップデート",
+        description: "税制改正に合わせて情報を随時アップデート",
     },
     {
         tag: "Quality",
-        title: "実績に基づく知見",
-        description: "数千件の遺品整理実績から得た実践的なノウハウ",
+        title: "厳選された税理士",
+        description: "相続に強い税理士を地域ごとにご紹介",
     },
 ];
 

@@ -7,8 +7,8 @@ const PAGE_PATH = "/about";
 const FULL_URL = `${siteConfig.baseUrl}${PAGE_PATH}`;
 
 export const metadata: Metadata = {
-    title: "運営者情報 | 遺品整理ガイド.jp",
-    description: "遺品整理ガイド.jpの運営者情報ページです。サイトの運営会社、連絡先等をご案内しています。",
+    title: "運営者情報 | あなたの街の相続相談ナビ",
+    description: "あなたの街の相続相談ナビの運営者情報ページです。サイトの運営会社、連絡先等をご案内しています。",
     alternates: {
         canonical: FULL_URL,
     },
@@ -29,7 +29,7 @@ export default function AboutPage() {
                             運営者情報
                         </h1>
                         <p className="text-slate-600 dark:text-slate-400">
-                            遺品整理ガイド.jpの運営について
+                            あなたの街の相続相談ナビの運営について
                         </p>
                     </div>
                 </div>
@@ -61,7 +61,7 @@ export default function AboutPage() {
                                                     サイト名
                                                 </th>
                                                 <td className="px-4 py-4 text-slate-600 dark:text-slate-400">
-                                                    遺品整理ガイド.jp
+                                                    あなたの街の相続相談ナビ
                                                 </td>
                                             </tr>
                                             <tr className="bg-white dark:bg-slate-950">
@@ -111,13 +111,13 @@ export default function AboutPage() {
                                     サイトの目的
                                 </h2>
                                 <p className="text-slate-600 dark:text-slate-400 leading-relaxed mb-4">
-                                    「遺品整理ガイド.jp」は、遺品整理でお困りの方へ向けた情報サイトです。
+                                    「あなたの街の相続相談ナビ」は、相続でお困りの方へ向けた情報サイトです。
                                 </p>
                                 <p className="text-slate-600 dark:text-slate-400 leading-relaxed mb-4">
-                                    大切な方を亡くされた後の遺品整理は、精神的にも肉体的にも大きな負担がかかります。当サイトでは、遺品整理に関する基礎知識、業者選びのポイント、費用の相場など、必要な情報を分かりやすくお伝えすることで、少しでも皆さまのお役に立てれば幸いです。
+                                    大切な方を亡くされた後の相続手続きは、精神的にも肉体的にも大きな負担がかかります。当サイトでは、相続に関する基礎知識、税理士選びのポイント、費用の相場など、必要な情報を分かりやすくお伝えすることで、少しでも皆さまのお役に立てれば幸いです。
                                 </p>
                                 <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
-                                    また、家具や家電など各品目ごとの処分方法についても詳しく解説しており、遺品整理だけでなく、日常の不用品処分にもご活用いただけます。
+                                    あなたの地域で信頼できる相続専門の税理士を見つけるお手伝いをいたします。
                                 </p>
                             </section>
 

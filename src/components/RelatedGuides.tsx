@@ -9,23 +9,28 @@ interface RelatedGuidesProps {
 const allGuides = [
     {
         path: guidePages.firstTime.path,
-        title: "初めての遺品整理",
-        description: "法的手続きと片付けの実践ガイド",
+        title: "初めての相続",
+        description: "相続の基礎知識と手続きの流れ",
     },
     {
         path: guidePages.choosingCompany.path,
-        title: "業者選びのコツ",
-        description: "相見積もりと質問チェックリスト",
+        title: "税理士選びのポイント",
+        description: "相続専門税理士の選び方",
     },
     {
         path: guidePages.precautions.path,
-        title: "気を付けるポイント",
-        description: "メンタルケア・空き家リスク対策",
+        title: "相続手続きの注意点",
+        description: "期限・書類・トラブル対策",
     },
     {
-        path: guidePages.selfCare.path,
-        title: "あなたへ",
-        description: "心と体を守りながら進めるガイド",
+        path: guidePages.costBreakdown.path,
+        title: "税理士費用の相場",
+        description: "相続税申告の費用目安",
+    },
+    {
+        path: guidePages.digitalLegacy.path,
+        title: "デジタル資産の相続",
+        description: "暗号資産・電子マネーの扱い",
     },
 ];
 

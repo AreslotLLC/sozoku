@@ -21,13 +21,13 @@ export default async function HomePage() {
     <div className="min-h-screen">
       {/* 構造化データ */}
       <WebSiteSchema
-        name="遺品整理ガイド.jp"
+        name="あなたの街の相続相談ナビ"
         url={BASE_URL}
-        description="遺品整理・不用品処分でお困りの方へ。あらゆる品目の処分方法を詳しく解説。"
+        description="相続税申告・遺産分割でお困りの方へ。あなたの地域で相続に強い税理士を見つけましょう。"
         searchUrl={`${BASE_URL}/search`}
       />
       <OrganizationSchema
-        name="遺品整理ガイド.jp"
+        name="あなたの街の相続相談ナビ"
         url={BASE_URL}
         logo={`${BASE_URL}/logo.png`}
       />
@@ -43,15 +43,15 @@ export default async function HomePage() {
             {/* テキストコンテンツ */}
             <div className="text-center lg:text-left">
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 mb-4 sm:mb-6 leading-[1.15] tracking-tight">
-                あらゆるモノの
+                地域で探す
                 <span className="block mt-1 sm:mt-2 text-accent whitespace-nowrap">
-                  処分方法データベース
+                  相続に強い税理士
                 </span>
               </h1>
               <p className="text-base sm:text-lg lg:text-xl text-slate-600 mb-6 sm:mb-8 leading-relaxed max-w-xl mx-auto lg:mx-0">
-                遺品整理・不用品処分に必要な情報を網羅。
+                相続税申告・遺産分割でお困りの方へ。
                 <br className="hidden sm:block" />
-                正しい知識で、スムーズな整理を実現します。
+                あなたの地域で信頼できる税理士を見つけましょう。
               </p>
 
               {/* 検索バー */}
@@ -63,7 +63,7 @@ export default async function HomePage() {
               <div className="relative w-full max-w-lg">
                 <Image
                   src="/hero-illustration.png"
-                  alt="整理された部屋のイラスト"
+                  alt="相続相談のイメージ"
                   width={500}
                   height={400}
                   className="rounded-2xl shadow-2xl"
@@ -83,10 +83,10 @@ export default async function HomePage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 dark:text-white mb-3">
-              カテゴリーから探す
+              専門分野から探す
             </h2>
             <p className="text-base sm:text-lg text-slate-600 dark:text-slate-400 max-w-3xl mx-auto">
-              処分したい品目のカテゴリーを選んで、詳しい処分方法をご確認ください。
+              相続の種類や課題に応じて、専門の税理士を探すことができます。
             </p>
           </div>
           <ul
@@ -110,10 +110,10 @@ export default async function HomePage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
             <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white mb-3">
-              50音順で探す
+              地域から探す
             </h2>
             <p className="text-slate-600 dark:text-slate-400">
-              品目名の頭文字から記事を検索できます
+              あなたの街の税理士を探すことができます
             </p>
           </div>
           <GojuonIndex />
@@ -134,7 +134,7 @@ export default async function HomePage() {
               最新の記事
             </h2>
             <p className="text-base sm:text-lg text-slate-600 dark:text-slate-400 max-w-3xl mx-auto">
-              遺品整理・処分に関する最新の情報をお届けします。
+              相続・税理士に関する最新の情報をお届けします。
             </p>
           </div>
           <ul
@@ -181,32 +181,33 @@ export default async function HomePage() {
             id="cta-heading"
             className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 dark:text-white mb-3"
           >
-            お困りのことはありませんか？
+            相続でお困りのことはありませんか？
           </h2>
           <p className="text-base sm:text-lg text-slate-600 dark:text-slate-400 mb-4 max-w-2xl mx-auto">
-            遺品整理のプロに相談すれば、面倒な仕分け・搬出・処分を
+            相続税申告・遺産分割・不動産相続など、
             <br className="hidden sm:block" />
-            すべて任せることができます。
+            相続の専門家である税理士に相談しましょう。
           </p>
           <ul className="flex flex-wrap justify-center gap-4 text-sm text-slate-500 dark:text-slate-400 mb-8">
             <li className="flex items-center gap-1">
-              <span className="text-green-500">✓</span> 最短即日対応
+              <span className="text-green-500">✓</span> 初回相談無料
             </li>
             <li className="flex items-center gap-1">
-              <span className="text-green-500">✓</span> 無料見積もり
+              <span className="text-green-500">✓</span> 地域密着
             </li>
             <li className="flex items-center gap-1">
-              <span className="text-green-500">✓</span> 全国対応
+              <span className="text-green-500">✓</span> 相続専門
             </li>
           </ul>
           <a
             href="/contact"
             className="inline-flex items-center justify-center px-10 py-5 text-lg font-bold bg-accent text-white rounded-2xl hover:opacity-90 transition-all duration-300 shadow-xl shadow-accent/20 hover:shadow-2xl hover:scale-105"
           >
-            無料でプロに相談する
+            無料で税理士を探す
           </a>
         </div>
       </section>
     </div>
   );
 }
+

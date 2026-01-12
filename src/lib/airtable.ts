@@ -363,8 +363,8 @@ function mapRecordToRegionalItem(record: any): RegionalItem {
 
 function getMockCategories(): Category[] {
     return [
-        { id: "cat1", slug: "furniture", name: "家具", description: "家具の処分", itemCount: 10 },
-        { id: "cat2", slug: "electronics", name: "家電", description: "家電の処分", itemCount: 15 },
+        { id: "cat1", slug: "inheritance-tax", name: "相続税申告", description: "相続税申告のガイド", itemCount: 10 },
+        { id: "cat2", slug: "business-succession", name: "事業承継", description: "事業承継のガイド", itemCount: 15 },
     ];
 }
 
@@ -372,19 +372,19 @@ function getMockItems(): Item[] {
     return [
         {
             id: "item1",
-            slug: "sofa",
-            itemName: "ソファ",
-            categorySlug: "furniture",
-            categoryName: "家具",
+            slug: "inheritance-tax-filing",
+            itemName: "相続税申告",
+            categorySlug: "inheritance-tax",
+            categoryName: "相続税申告",
             createdAt: "2024-01-01",
             updatedAt: "2024-01-01",
         },
         {
             id: "item2",
-            slug: "fridge",
-            itemName: "冷蔵庫",
-            categorySlug: "electronics",
-            categoryName: "家電",
+            slug: "business-succession-planning",
+            itemName: "事業承継対策",
+            categorySlug: "business-succession",
+            categoryName: "事業承継",
             createdAt: "2024-01-01",
             updatedAt: "2024-01-01",
         },
@@ -402,24 +402,24 @@ function getMockRegionalItems(): RegionalItem[] {
     return [
         {
             id: "ri1",
-            itemSlug: "sofa",
+            itemSlug: "inheritance-tax-filing",
             regionSlug: "kobe-shi",
             regionName: "神戸市",
-            title: "神戸市でのソファの処分方法",
-            content: "# 神戸市でのソファ処分\n\n神戸市では...",
-            description: "神戸市でのソファの捨て方解説",
+            title: "神戸市の相続に強い税理士",
+            content: "# 神戸市の相続に強い税理士\n\n神戸市で相続税申告をお考えの方へ...",
+            description: "神戸市で相続に強い税理士をご紹介",
             status: "Published",
             createdAt: "2024-01-01",
             updatedAt: "2024-01-01",
         },
         {
             id: "ri2",
-            itemSlug: "fridge",
+            itemSlug: "inheritance-tax-filing",
             regionSlug: "osaka-shi",
             regionName: "大阪市",
-            title: "大阪市での冷蔵庫の処分方法",
-            content: "# 大阪市での冷蔵庫処分\n\n大阪市では...",
-            description: "大阪市での冷蔵庫の捨て方解説",
+            title: "大阪市の相続に強い税理士",
+            content: "# 大阪市の相続に強い税理士\n\n大阪市で相続税申告をお考えの方へ...",
+            description: "大阪市で相続に強い税理士をご紹介",
             status: "Published",
             createdAt: "2024-01-02",
             updatedAt: "2024-01-02",

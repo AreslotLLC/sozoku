@@ -2,45 +2,30 @@
 import { ImageResponse } from "next/og";
 import { NextRequest } from "next/server";
 
-// カテゴリー別の色設定
+// カテゴリー別の色設定（相続関連）
 const categoryColors: Record<
     string,
     { bg: string; accent: string; text: string }
 > = {
-    furniture: {
-        bg: "linear-gradient(135deg, #fef3c7 0%, #fde68a 50%, #fcd34d 100%)",
-        accent: "#d97706",
-        text: "#78350f",
-    },
-    electronics: {
+    inheritance: {
         bg: "linear-gradient(135deg, #dbeafe 0%, #bfdbfe 50%, #93c5fd 100%)",
         accent: "#2563eb",
         text: "#1e3a8a",
     },
-    clothes: {
-        bg: "linear-gradient(135deg, #fce7f3 0%, #fbcfe8 50%, #f9a8d4 100%)",
-        accent: "#db2777",
-        text: "#831843",
-    },
-    books: {
+    business: {
         bg: "linear-gradient(135deg, #d1fae5 0%, #a7f3d0 50%, #6ee7b7 100%)",
         accent: "#059669",
         text: "#064e3b",
     },
-    valuables: {
+    realestate: {
+        bg: "linear-gradient(135deg, #fef3c7 0%, #fde68a 50%, #fcd34d 100%)",
+        accent: "#d97706",
+        text: "#78350f",
+    },
+    digital: {
         bg: "linear-gradient(135deg, #ede9fe 0%, #ddd6fe 50%, #c4b5fd 100%)",
         accent: "#7c3aed",
         text: "#4c1d95",
-    },
-    photos: {
-        bg: "linear-gradient(135deg, #ffe4e6 0%, #fecdd3 50%, #fda4af 100%)",
-        accent: "#e11d48",
-        text: "#881337",
-    },
-    vehicles: {
-        bg: "linear-gradient(135deg, #cffafe 0%, #a5f3fc 50%, #67e8f9 100%)",
-        accent: "#0891b2",
-        text: "#164e63",
     },
 };
 
@@ -50,27 +35,27 @@ const defaultColors = {
     text: "#1e293b",
 };
 
-// モックデータ（airtableのEdge互換問題を回避）
+// モックデータ（相続税理士紹介向け）
 const mockItems: Record<string, { title: string; categoryName: string; categorySlug: string }> = {
-    "sofa-disposal": {
-        title: "ソファの処分方法",
-        categoryName: "家具",
-        categorySlug: "furniture",
+    "tokyo-inheritance": {
+        title: "東京都の相続に強い税理士",
+        categoryName: "相続税申告",
+        categorySlug: "inheritance",
     },
-    "reizouko-disposal": {
-        title: "冷蔵庫の処分方法",
-        categoryName: "家電",
-        categorySlug: "electronics",
+    "osaka-inheritance": {
+        title: "大阪府の相続に強い税理士",
+        categoryName: "相続税申告",
+        categorySlug: "inheritance",
     },
-    "sentakuki-disposal": {
-        title: "洗濯機の処分方法",
-        categoryName: "家電",
-        categorySlug: "electronics",
+    "nagoya-inheritance": {
+        title: "名古屋市の相続に強い税理士",
+        categoryName: "相続税申告",
+        categorySlug: "inheritance",
     },
-    "bed-disposal": {
-        title: "ベッドの処分方法",
-        categoryName: "家具",
-        categorySlug: "furniture",
+    "kobe-inheritance": {
+        title: "神戸市の相続に強い税理士",
+        categoryName: "相続税申告",
+        categorySlug: "inheritance",
     },
 };
 
@@ -155,7 +140,7 @@ export async function GET(
                             color: "#2563eb",
                         }}
                     >
-                        遺品整理ガイド
+                        相続相談ナビ
                     </div>
 
                     {/* カテゴリーバッジ */}
@@ -200,7 +185,7 @@ export async function GET(
                             display: "flex",
                         }}
                     >
-                        処分方法を詳しく解説
+                        相続に強い税理士を紹介
                     </div>
                 </div>
             </div>

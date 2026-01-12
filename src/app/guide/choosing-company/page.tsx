@@ -131,7 +131,7 @@ export default function ChoosingCompanyPage() {
                                                 },
                                                 {
                                                     title: "土地評価の経験",
-                                                    desc: "土地の減額評価（広大地評価等）の経験があるか確認しましょう。",
+                                                    desc: "土地の減額評価（地積規模の大きな宅地等）の経験があるか確認しましょう。",
                                                 },
                                                 {
                                                     title: "料金体系の明確さ",

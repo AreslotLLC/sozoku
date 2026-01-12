@@ -53,7 +53,7 @@ export function FloatingCTA({
                 {/* マイクロコピー */}
                 <p className="text-white/95 text-[10px] font-bold tracking-tight text-center mb-1.5 flex items-center justify-center gap-1.5">
                     <span className="w-1.5 h-1.5 bg-white rounded-full animate-pulse" />
-                    重い家電の運び出しも全部お任せ！
+                    相続のお悩み、専門家が解決します
                 </p>
 
                 {/* CTAボタン */}

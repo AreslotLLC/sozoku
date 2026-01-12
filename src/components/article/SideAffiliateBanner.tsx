@@ -29,21 +29,21 @@ export function SideAffiliateBanner({ links, linkUrl, bannerHtml }: SideAffiliat
                     </span>
 
                     <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-5 leading-tight tracking-tight">
-                        最短即日で解決！<br />不用品回収のプロ
+                        相続のお悩み<br />専門家が解決
                     </h3>
 
                     <ul className="space-y-2.5 mb-8">
                         <li className="flex items-center gap-2 text-xs font-bold text-slate-700 dark:text-slate-300">
                             <span className="text-primary">•</span>
-                            最短30分で駆けつけ
+                            初回相談無料
                         </li>
                         <li className="flex items-center gap-2 text-xs font-bold text-slate-700 dark:text-slate-300">
                             <span className="text-primary">•</span>
-                            見積もり後の追加料金なし
+                            相続税申告の実績多数
                         </li>
                         <li className="flex items-center gap-2 text-xs font-bold text-slate-700 dark:text-slate-300">
                             <span className="text-primary">•</span>
-                            24時間・365日受付
+                            オンライン相談可能
                         </li>
                     </ul>
 

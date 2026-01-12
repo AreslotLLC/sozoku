@@ -12,29 +12,29 @@ interface AffiliateCTAProps {
 // マイクロコピーの設定
 const microCopyConfig = {
     intro: {
-        badge: "お急ぎの方へ",
-        heading: "プロに相談してスムーズに解決しませんか？",
-        description: "最短即日で不用品をスッキリ処分。手間をかけずに片付けたい方に最適です。",
+        badge: "相続でお困りの方へ",
+        heading: "専門の税理士に相談してみませんか？",
+        description: "相続税申告や遺産分割に強い税理士が、あなたの状況に合わせてアドバイスします。",
         bullets: [],
     },
     mid: {
-        badge: "手間をかけたくない方へ",
-        heading: "プロにお任せで楽々処分",
+        badge: "専門家に相談したい方へ",
+        heading: "相続専門の税理士に相談",
         description: "",
         bullets: [
-            { icon: Zap, text: "最短30分で駆けつけ" },
-            { icon: Truck, text: "重い家電の運び出しも丸投げOK" },
-            { icon: BadgePercent, text: "今ならWeb申込で10%OFF" },
+            { icon: Zap, text: "初回相談無料" },
+            { icon: Truck, text: "オンライン相談可能" },
+            { icon: BadgePercent, text: "相続税申告の実績多数" },
         ],
     },
     outro: {
         badge: "まとめ",
-        heading: "今すぐプロに依頼する",
+        heading: "今すぐ税理士に相談する",
         description: "",
         bullets: [
-            { icon: Zap, text: "最短即日対応" },
-            { icon: Truck, text: "搬出・処分すべてお任せ" },
-            { icon: BadgePercent, text: "無料見積もり対応" },
+            { icon: Zap, text: "初回相談無料" },
+            { icon: Truck, text: "相続専門の税理士が対応" },
+            { icon: BadgePercent, text: "全国対応" },
         ],
     },
 };

@@ -18,8 +18,8 @@ export interface Category {
  */
 export interface Item {
   id: string;
-  slug: string; // e.g. "sofa"
-  itemName: string; // e.g. "ソファ"
+  slug: string; // e.g. "inheritance-tax-filing"
+  itemName: string; // e.g. "相続税申告"
   categorySlug: string;
   categoryName: string;
   prompt?: string; // AI生成用プロンプト
@@ -59,7 +59,7 @@ export interface RegionalItem {
   itemSlug: string; // Link to Items
   regionSlug: string; // Link to Regions
   regionName: string; // Lookup from Regions
-  title: string; // Generated Title e.g. "神戸市でのソファの処分方法"
+  title: string; // Generated Title e.g. "神戸市の相続に強い税理士"
   content: string; // Generated Content
   description: string;
   affiliateUrl?: string; // Override Affiliate URL

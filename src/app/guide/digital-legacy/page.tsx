@@ -119,7 +119,7 @@ export default function DigitalLegacyPage() {
                                         <div className="grid sm:grid-cols-2 gap-4">
                                             {[
                                                 { title: "暗号資産（仮想通貨）", items: ["ビットコイン", "イーサリアム", "その他アルトコイン"] },
-                                                { title: "電子マネー・ポイント", items: ["PayPay残高", "楽天ポイント", "各種電子マネー"] },
+                                                { title: "電子マネー・ポイント", items: ["電子マネー残高", "各種ポイント", "※相続可否はサービスにより異なります"] },
                                                 { title: "オンライン口座", items: ["ネット銀行", "ネット証券", "FX口座"] },
                                                 { title: "その他のデジタル資産", items: ["NFT", "ドメイン", "オンラインゲームのアイテム"] },
                                             ].map((category, index) => (

@@ -164,7 +164,7 @@ export default function CostBreakdownPage() {
                                             </table>
                                         </div>
                                         <p className="text-xs text-slate-500 mt-4">
-                                            ※上記は目安であり、実際の費用は事務所や申告内容によって異なります。
+                                            ※上記は相続税申告が必要な場合の目安であり、実際の費用は事務所や申告内容によって異なります。
                                         </p>
                                     </section>
 

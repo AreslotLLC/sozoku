@@ -43,10 +43,10 @@ export async function generateMetadata({
     const imageUrl = `/images/hero/${catSlug}.png`;
 
     // Airtableにカスタムタイトルがあればそれを使用、なければフォールバック
-    const pageTitle = category.metaTitle || `${category.name}の処分方法ガイド`;
+    const pageTitle = category.metaTitle || `${category.name}の相続ガイド`;
     const pageDescription = category.metaDescription ||
         category.description ||
-        `${category.name}の処分方法について詳しく解説。不用品回収や買取のポイント、費用相場、注意点など。`;
+        `${category.name}について詳しく解説。相続の流れ、税理士の選び方、費用相場など。`;
 
     return {
         title: pageTitle,
@@ -120,7 +120,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
 
                             <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight mb-4 leading-[1.1]">
                                 {category.name}<span className="text-accent">の</span><br />
-                                処分方法
+                                相続ガイド
                             </h1>
 
                             {category.description && (

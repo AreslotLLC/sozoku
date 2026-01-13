@@ -12,14 +12,14 @@ export interface Category {
 }
 
 /**
- * 品目マスター (Items Table)
+ * 相談内容・手続きマスター (Items Table)
  * 地域別記事生成のための設定・CTA管理用マスター
  * ※このテーブル自体が記事ページになることはありません
  */
 export interface Item {
   id: string;
   slug: string; // e.g. "inheritance-tax-filing"
-  itemName: string; // e.g. "相続税申告"
+  itemName: string; // e.g. "相続税申告", "遺産分割協議"
   categorySlug: string;
   categoryName: string;
   prompt?: string; // AI生成用プロンプト
@@ -32,6 +32,10 @@ export interface Item {
   introBannerHtml?: string;
   outroCtaUrl?: string;
   outroBannerHtml?: string;
+  bannerVerticalHtml?: string; // 縦長 (160x600)
+  bannerHorizontalHtml?: string; // 横長 (468x60)
+  bannerSquareSidebarHtml?: string; // ほぼ四角 (300x250) - サイドバー用
+  bannerSquareBottomHtml?: string; // ほぼ四角 (300x250) - 下部用
 
   createdAt: string;
   updatedAt: string;
@@ -158,4 +162,8 @@ export interface ArticleProps {
   sidebarCta?: { url: string; html: string };
   introCta?: { url: string; html: string };
   outroCta?: { url: string; html: string };
+  bannerVertical?: string;
+  bannerHorizontal?: string;
+  bannerSquareSidebar?: string;
+  bannerSquareBottom?: string;
 }

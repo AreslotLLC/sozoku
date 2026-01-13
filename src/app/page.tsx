@@ -4,6 +4,7 @@ import { CategoryCard } from "@/components/CategoryCard";
 import { ItemCard } from "@/components/ItemCard";
 import { TrustSignals, GojuonIndex, SearchBar } from "@/components/home";
 import { WebSiteSchema, OrganizationSchema } from "@/components/seo";
+import { affiliateLinks } from "@/lib/siteConfig";
 
 // トップページはlayout.tsxのdefaultタイトルを使用
 
@@ -200,7 +201,9 @@ export default async function HomePage() {
             </li>
           </ul>
           <a
-            href="/contact"
+            href={affiliateLinks.quote}
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center justify-center px-10 py-5 text-lg font-bold bg-accent text-white rounded-2xl hover:opacity-90 transition-all duration-300 shadow-xl shadow-accent/20 hover:shadow-2xl hover:scale-105"
           >
             無料で税理士を探す

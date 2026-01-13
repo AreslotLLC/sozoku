@@ -43,7 +43,7 @@ export const guidePages = {
  * アフィリエイトリンク設定
  */
 export const affiliateLinks = {
-    quote: "https://sozoku-navi.jp/contact", // 相談ページ
+    quote: "https://px.a8.net/svt/ejp?a8mat=YOUR_AFFILIATE_ID", // Airtable等で管理されるアフィリエイトURLのデフォルト
     phone: "tel:0120-000-000", // 電話番号
 };
 

@@ -37,23 +37,13 @@ const defaultColors = {
 
 // モックデータ（相続税理士紹介向け）
 const mockItems: Record<string, { title: string; categoryName: string; categorySlug: string }> = {
-    "tokyo-inheritance": {
-        title: "東京都の相続に強い税理士",
-        categoryName: "相続税申告",
-        categorySlug: "inheritance",
-    },
-    "osaka-inheritance": {
-        title: "大阪府の相続に強い税理士",
-        categoryName: "相続税申告",
-        categorySlug: "inheritance",
-    },
-    "nagoya-inheritance": {
-        title: "名古屋市の相続に強い税理士",
-        categoryName: "相続税申告",
-        categorySlug: "inheritance",
-    },
-    "kobe-inheritance": {
+    "kobe-shi-inheritance-tax-filing": {
         title: "神戸市の相続に強い税理士",
+        categoryName: "相続税申告",
+        categorySlug: "inheritance",
+    },
+    "osaka-shi-inheritance-tax-filing": {
+        title: "大阪市の相続に強い税理士",
         categoryName: "相続税申告",
         categorySlug: "inheritance",
     },
@@ -61,9 +51,12 @@ const mockItems: Record<string, { title: string; categoryName: string; categoryS
 
 export async function GET(
     request: NextRequest,
-    { params }: { params: Promise<{ slug: string }> }
+    { params }: { params: Promise<{ regionSlug: string; itemSlug: string }> }
 ) {
-    const { slug } = await params;
+    const { regionSlug, itemSlug } = await params;
+
+    // スラッグを組み合わせてモックキーを生成（例: kobe-shi-inheritance-tax-filing）
+    const slug = `${regionSlug}-${itemSlug}`;
 
     // モックから記事データ取得
     const item = mockItems[slug];

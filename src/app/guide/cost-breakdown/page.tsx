@@ -250,7 +250,9 @@ export default function CostBreakdownPage() {
                                             相続に強い税理士から、あなたの状況に合った見積もりを受け取りましょう。
                                         </p>
                                         <Link
-                                            href="/contact"
+                                            href={affiliateLinks.quote}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
                                             className="inline-block px-8 py-4 bg-white text-primary font-bold rounded-xl hover:bg-slate-100 transition-colors"
                                         >
                                             無料で税理士を探す

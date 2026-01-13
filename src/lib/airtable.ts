@@ -52,6 +52,10 @@ const FIELDS = {
     INTRO_BANNER_HTML: "IntroBannerHtml",
     OUTRO_CTA_URL: "OutroCtaUrl",
     OUTRO_BANNER_HTML: "OutroBannerHtml",
+    BANNER_VERTICAL_HTML: "BannerVertical_160x600",
+    BANNER_HORIZONTAL_HTML: "BannerHorizontal_468x60",
+    BANNER_SQUARE_SIDE_HTML: "BannerSquare_300x250_Side",
+    BANNER_SQUARE_BOTTOM_HTML: "BannerSquare_300x250_Bottom",
 
     // Regions
     REGION_TBL_SLUG: "slug",
@@ -322,6 +326,10 @@ function mapRecordToItem(record: any): Item {
         introBannerHtml: record.get(FIELDS.INTRO_BANNER_HTML) as string | undefined,
         outroCtaUrl: record.get(FIELDS.OUTRO_CTA_URL) as string | undefined,
         outroBannerHtml: record.get(FIELDS.OUTRO_BANNER_HTML) as string | undefined,
+        bannerVerticalHtml: record.get(FIELDS.BANNER_VERTICAL_HTML) as string | undefined,
+        bannerHorizontalHtml: record.get(FIELDS.BANNER_HORIZONTAL_HTML) as string | undefined,
+        bannerSquareSidebarHtml: record.get(FIELDS.BANNER_SQUARE_SIDE_HTML) as string | undefined,
+        bannerSquareBottomHtml: record.get(FIELDS.BANNER_SQUARE_BOTTOM_HTML) as string | undefined,
         createdAt: record._rawJson.createdTime,
         updatedAt: record.get(FIELDS.UPDATED_AT) || record._rawJson.createdTime,
     };
@@ -378,6 +386,10 @@ function getMockItems(): Item[] {
             categoryName: "相続税申告",
             createdAt: "2024-01-01",
             updatedAt: "2024-01-01",
+            bannerVerticalHtml: '<div style="width:160px;height:600px;background:#f8f9fa;border:2px dashed #dee2e6;display:flex;align-items:center;justify-content:center;text-align:center;font-size:12px;color:#adb5bd;">縦長<br/>Vertical<br/>(160x600)</div>',
+            bannerHorizontalHtml: '<div style="width:468px;height:60px;background:#f8f9fa;border:2px dashed #dee2e6;display:flex;align-items:center;justify-content:center;text-align:center;font-size:12px;color:#adb5bd;">横長 / Horizontal (468x60)</div>',
+            bannerSquareSidebarHtml: '<div style="width:300px;height:250px;background:#f8f9fa;border:2px dashed #dee2e6;display:flex;align-items:center;justify-content:center;text-align:center;font-size:12px;color:#adb5bd;">ほぼ四角 / Square Side<br/>(300x250)</div>',
+            bannerSquareBottomHtml: '<div style="width:300px;height:250px;background:#f8f9fa;border:2px dashed #dee2e6;display:flex;align-items:center;justify-content:center;text-align:center;font-size:12px;color:#adb5bd;">ほぼ四角 / Square Bottom<br/>(300x250)</div>',
         },
         {
             id: "item2",
